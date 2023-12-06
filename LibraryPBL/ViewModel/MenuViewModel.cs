@@ -424,8 +424,8 @@ namespace LibraryPBL.ViewModel
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"\nНовая книга успешно добавлена!");
             Console.ResetColor();
-            Console.WriteLine("Нажмите любую клавишу для перехода назад.");
             RefreshData();
+            Console.WriteLine("Нажмите любую клавишу для перехода назад.");
             Console.ReadLine();
         }
 
@@ -532,6 +532,7 @@ namespace LibraryPBL.ViewModel
             Console.ForegroundColor= ConsoleColor.White;
             Console.WriteLine($"Изменения сохранены!");
             Console.ResetColor();
+            RefreshData();
             Console.WriteLine(selectedBook.allInfo());
         }
 
@@ -632,6 +633,7 @@ namespace LibraryPBL.ViewModel
 
             do
             {
+
                 Console.Clear();
                 Console.BackgroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"{SelectedSubLvl}");

@@ -1,6 +1,6 @@
 ﻿using LibraryPBL.ViewModel;
 
 Console.Title = "Библиотека";
-//Console.Beep();
+Console.Beep();
 
 MenuViewModel menuViewModel = new ();
