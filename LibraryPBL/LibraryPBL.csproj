@@ -11,8 +11,4 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ConsoleTables" Version="2.6.1" />
-  </ItemGroup>
-
 </Project>
