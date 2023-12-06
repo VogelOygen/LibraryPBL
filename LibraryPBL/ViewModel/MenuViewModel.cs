@@ -417,7 +417,7 @@ namespace LibraryPBL.ViewModel
                 #endregion
 
                 Console.ForegroundColor = ConsoleColor.Green;
-                sw.WriteLine($"\nИтог: {Name} | {Author} | {ISBN} | {Publish} | {Category} | {Language}");
+                sw.WriteLine($"{Name};{Author};{ISBN};{Publish};{Category};{Language}");
                 Console.ResetColor();
             }
             Console.BackgroundColor = ConsoleColor.DarkGreen;
