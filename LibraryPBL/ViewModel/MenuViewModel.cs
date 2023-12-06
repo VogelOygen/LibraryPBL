@@ -22,6 +22,7 @@ namespace LibraryPBL.ViewModel
         public IEnumerable<Book> WebBooks { get; set; }
         public IEnumerable<Book> AIBooks { get; set; }
         IEnumerable<Book> selectedCategory;
+
         #endregion
 
         public MenuViewModel()
@@ -32,7 +33,7 @@ namespace LibraryPBL.ViewModel
 
         #region сервисы
 
-        //форматируем текст префиксов меню
+        //форматируем текст префиксов меню --> [CORE]
         private void PrintNavItem(string prefix, string item)
         {
             Console.Write("[");
@@ -42,7 +43,7 @@ namespace LibraryPBL.ViewModel
             Console.Write($"] {item}\n");
         }
 
-        //корневое меню
+        //корневое меню --> [CORE]
         void RunMenu()
         {
             int choice;
@@ -76,7 +77,7 @@ namespace LibraryPBL.ViewModel
             } while (true);
         }
 
-        //обновление данных
+        //обновление данных --> [CORE]
         private void RefreshData()
         {
             BookInitialization();
@@ -139,13 +140,14 @@ namespace LibraryPBL.ViewModel
                 if (!headerPrinted)
                 {
                     Console.WriteLine($"{"Name",-30} | {"Author",-20} | {"ISBN",-15} | {"Publish",-15} | {"Language",-20} | {"Category",-20} |");
-                    Console.WriteLine(new string('-', 140));
+                    Console.WriteLine(new string('-', 137));
                     headerPrinted = true;
                 }
 
-                Console.BackgroundColor = index % 2 != 0 ? ConsoleColor.Black : ConsoleColor.Gray;
+                Console.BackgroundColor = index % 2 != 0 ? ConsoleColor.Black : ConsoleColor.DarkGray;
+                Console.ForegroundColor = index % 2 != 0 ? ConsoleColor.Black : ConsoleColor.White;
                 Console.WriteLine($"{book.Name,-30} | {book.Author,-20} | {book.ISBN,-15} | {book.Publish,-15} | {string.Join(", ", book.Language),-20} | {string.Join(", ", book.Category),-20} |");
-                Console.WriteLine(new string('-', 140));
+                Console.WriteLine(new string('-', 137));
 
                 Console.ResetColor();
             }
@@ -324,7 +326,7 @@ namespace LibraryPBL.ViewModel
             }
         }
 
-        //добавляем новую книгу
+        //добавляем новую книгу --> [ADMIN]
         private void AddBookServices()
         {
             using (StreamWriter sw = new StreamWriter("library.txt", true))
@@ -429,7 +431,7 @@ namespace LibraryPBL.ViewModel
             Console.ReadLine();
         }
 
-        //редактируем книгу
+        //редактируем книгу --> [ADMIN]
         private void EditBookServices()
         {
             SearchBookServices();
