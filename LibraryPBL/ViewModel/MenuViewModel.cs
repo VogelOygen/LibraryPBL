@@ -77,6 +77,27 @@ namespace LibraryPBL.ViewModel
             } while (true);
         }
 
+        //проверка ввода в меню --> [CORE]
+        static int GetUserChoice(int maxChoice)
+        {
+            int choice;
+
+            while (true)
+            {
+                Console.Write("--> ");
+                if (int.TryParse(Console.ReadLine(), out choice) && choice >= 1 && choice <= maxChoice)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid choice. Please enter a number between 1 and {maxChoice}.");
+                }
+            }
+
+            return choice;
+        }
+
         //обновление данных --> [CORE]
         private void RefreshData()
         {
@@ -212,27 +233,6 @@ namespace LibraryPBL.ViewModel
                 }
             }
             return selectedBook;
-        }
-
-        //проверка ввода в меню --> [CORE]
-        static int GetUserChoice(int maxChoice)
-        {
-            int choice;
-
-            while (true)
-            {
-                Console.Write("--> ");
-                if (int.TryParse(Console.ReadLine(), out choice) && choice >= 1 && choice <= maxChoice)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine($"Invalid choice. Please enter a number between 1 and {maxChoice}.");
-                }
-            }
-
-            return choice;
         }
 
         //вывод категорий --> [CORE]
