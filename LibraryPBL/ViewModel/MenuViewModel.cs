@@ -697,7 +697,6 @@ namespace LibraryPBL.ViewModel
                     TablePrint(selectedCategory);
                     SelectedBook(selectedCategory);
                 }
-                //тут нужно написать else который будет ссылаться на другую часть этого же метода? или же нужно опять создать цикл
             }
 
             //поиск книги по всем разделам
@@ -785,13 +784,11 @@ namespace LibraryPBL.ViewModel
                         SelectEnter();
                         break;
                     case 2:
-                        Console.WriteLine("func 2");
                         //редактируем книгу
                         EditBook();
                         SelectEnter();
                         break;
                     case 3:
-                        Console.WriteLine("func 3");
                         //смотрим забронированные книги
                         SelectedBookPrint();
                         SelectEnter();
