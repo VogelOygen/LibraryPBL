@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace LibraryPBL.ViewModel
 {
-
+        
     internal class NavigationService
     {
         internal class MenuViewModel
@@ -211,7 +211,7 @@ namespace LibraryPBL.ViewModel
                     Console.WriteLine($"Ошибка при чтении файла: {ex.Message}");
                 }
             }
-
+            
             //добавляем новую книгу --> [FILEMANAGER]
             private void AddBook()
             {
@@ -774,7 +774,7 @@ namespace LibraryPBL.ViewModel
                     }
                 } while (true);
             }
-            private void AdminServices(int choiceId, string SelectedSubLvl)
+                private void AdminServices(int choiceId, string SelectedSubLvl)
             {
                 switch (choiceId)
                 {
@@ -820,8 +820,7 @@ namespace LibraryPBL.ViewModel
                     }
                 } while (true);
             }
-
-            private void UserServices(int choiceId, string SelectedSubLvl)
+                private void UserServices(int choiceId, string SelectedSubLvl)
             {
                 switch (choiceId)
                 {
