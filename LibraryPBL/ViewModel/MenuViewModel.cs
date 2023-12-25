@@ -15,7 +15,6 @@ namespace LibraryPBL.ViewModel
         internal class MenuViewModel
         {
             #region переменые 
-            kkjkjkljkl;
             List<Book> allBooks = new();
             List<Book> selectedBooks = new();
             Book selectedBook;
