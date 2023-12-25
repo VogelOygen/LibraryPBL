@@ -9,13 +9,12 @@ using System.Runtime.InteropServices;
 
 namespace LibraryPBL.ViewModel
 {
-        
     internal class NavigationService
     {
         internal class MenuViewModel
         {
             #region переменые 
-
+            //test
             List<Book> allBooks = new();
             List<Book> selectedBooks = new();
             Book selectedBook;
